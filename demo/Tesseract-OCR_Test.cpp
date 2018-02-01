@@ -276,6 +276,7 @@ void PreloadRenderers(tesseract::TessBaseAPI* api,
 
 int main(int argc, char **argv)
 {
+	// Blog: http://blog.csdn.net/fengbingchun/article/details/51628957
 	const char* lang = "eng";
 	const char* image = NULL;
 	const char* outputbase = NULL;
