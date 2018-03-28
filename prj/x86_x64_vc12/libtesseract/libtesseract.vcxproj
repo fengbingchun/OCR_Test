@@ -1,0 +1,720 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D8FC2C53-B565-4040-A43D-921CACE3554A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libtesseract</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>.\../../../obj/dbg/x64_vc12/libtesseract\</OutDir>
+    <IntDir>.\../../../obj/dbg/x64_vc12/libtesseract\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>.\../../../obj/rel/x64_vc12/libtesseract\</OutDir>
+    <IntDir>.\../../../obj/rel/x64_vc12/libtesseract\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;USE_STD_NAMESPACE;WINDLLNAME="$(TargetFileName)";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>
+      </SDLCheck>
+      <AdditionalIncludeDirectories>E:\GitCode\OCR_Test\src\tesseract-ocr\api;E:\GitCode\OCR_Test\src\tesseract-ocr\ccmain;E:\GitCode\OCR_Test\src\tesseract-ocr\ccstruct;E:\GitCode\OCR_Test\src\tesseract-ocr\ccutil;E:\GitCode\OCR_Test\src\tesseract-ocr\classify;E:\GitCode\OCR_Test\src\tesseract-ocr\cube;E:\GitCode\OCR_Test\src\tesseract-ocr\cutil;E:\GitCode\OCR_Test\src\tesseract-ocr\dict;E:\GitCode\OCR_Test\src\tesseract-ocr\neural_networks\runtime;E:\GitCode\OCR_Test\src\tesseract-ocr\opencl;E:\GitCode\OCR_Test\src\tesseract-ocr\textord;E:\GitCode\OCR_Test\src\tesseract-ocr\viewer;E:\GitCode\OCR_Test\src\tesseract-ocr\wordrec;E:\GitCode\OCR_Test\src\tesseract-ocr\vs2010\port;E:\GitCode\OCR_Test\src\tesseract-ocr\vs2010\libtesseract;E:\GitCode\OCR_Test\src\tesseract-ocr\vs2010\include;E:\GitCode\OCR_Test\src\leptonica-1.71\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <PrecompiledHeaderOutputFile>.\../../../obj/dbg/x64_vc12/libtesseract\libtesseract.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\../../../obj/dbg/x64_vc12/libtesseract\</AssemblerListingLocation>
+      <ObjectFileName>.\../../../obj/dbg/x64_vc12/libtesseract\</ObjectFileName>
+      <ProgramDataBaseFileName>.\../../../obj/dbg/x64_vc12/libtesseract\</ProgramDataBaseFileName>
+      <DisableSpecificWarnings>4244;4305;4018;4267;4996;4800;4005;4355;4099;4566;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <OutputFile>../../../lib/dbg/x64_vc12/libtesseract.lib</OutputFile>
+      <AdditionalDependencies>liblept.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:\GitCode\OCR_Test\lib\dbg\x64_vc12;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+    <Bscmake>
+      <OutputFile>.\../../../obj/dbg/x64_vc12/libtesseract\libtesseract.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;USE_STD_NAMESPACE;WINDLLNAME="$(TargetFileName)";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>
+      </SDLCheck>
+      <AdditionalIncludeDirectories>E:\GitCode\OCR_Test\src\tesseract-ocr\api;E:\GitCode\OCR_Test\src\tesseract-ocr\ccmain;E:\GitCode\OCR_Test\src\tesseract-ocr\ccstruct;E:\GitCode\OCR_Test\src\tesseract-ocr\ccutil;E:\GitCode\OCR_Test\src\tesseract-ocr\classify;E:\GitCode\OCR_Test\src\tesseract-ocr\cube;E:\GitCode\OCR_Test\src\tesseract-ocr\cutil;E:\GitCode\OCR_Test\src\tesseract-ocr\dict;E:\GitCode\OCR_Test\src\tesseract-ocr\neural_networks\runtime;E:\GitCode\OCR_Test\src\tesseract-ocr\opencl;E:\GitCode\OCR_Test\src\tesseract-ocr\textord;E:\GitCode\OCR_Test\src\tesseract-ocr\viewer;E:\GitCode\OCR_Test\src\tesseract-ocr\wordrec;E:\GitCode\OCR_Test\src\tesseract-ocr\vs2010\port;E:\GitCode\OCR_Test\src\tesseract-ocr\vs2010\libtesseract;E:\GitCode\OCR_Test\src\tesseract-ocr\vs2010\include;E:\GitCode\OCR_Test\src\leptonica-1.71\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderOutputFile>.\../../../obj/rel/x64_vc12/libtesseract\libtesseract.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\../../../obj/rel/x64_vc12/libtesseract\</AssemblerListingLocation>
+      <ObjectFileName>.\../../../obj/rel/x64_vc12/libtesseract\</ObjectFileName>
+      <ProgramDataBaseFileName>.\../../../obj/rel/x64_vc12/libtesseract\</ProgramDataBaseFileName>
+      <DisableSpecificWarnings>4244;4305;4018;4267;4996;4800;4005;4355;4099;4566;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <DebugInformationFormat />
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <OutputFile>../../../lib/rel/x64_vc12/libtesseract.lib</OutputFile>
+    </Lib>
+    <Lib>
+      <AdditionalDependencies>liblept.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:\GitCode\OCR_Test\lib\rel\x64_vc12;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+    <Bscmake>
+      <OutputFile>.\../../../obj/rel/x64_vc12/libtesseract\libtesseract.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\tesseract-ocr\api\apitypes.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\api\baseapi.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\api\capi.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\api\renderer.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccmain\control.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccmain\cubeclassifier.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccmain\cube_reco_context.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccmain\docqual.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccmain\equationdetect.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccmain\fixspace.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccmain\ltrresultiterator.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccmain\mutableiterator.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccmain\osdetect.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccmain\output.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccmain\pageiterator.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccmain\paragraphs.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccmain\paragraphs_internal.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccmain\paramsd.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccmain\pgedit.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccmain\reject.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccmain\resultiterator.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccmain\tessbox.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccmain\tessedit.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccmain\tesseractclass.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccmain\tesseract_cube_combiner.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccmain\tessvars.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccmain\thresholder.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccmain\werdit.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\blamer.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\blckerr.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\blobbox.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\blobs.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\blread.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\boxread.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\boxword.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\ccstruct.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\coutln.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\crakedge.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\detlinefit.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\dppoint.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\fontinfo.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\genblob.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\hpdsizes.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\imagedata.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\ipoints.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\linlsq.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\matrix.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\mod128.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\normalis.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\ocrblock.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\ocrpara.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\ocrrow.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\otsuthr.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\pageres.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\params_training_featdef.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\pdblock.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\points.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\polyaprx.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\polyblk.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\publictypes.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\quadlsq.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\quadratc.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\quspline.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\ratngs.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\rect.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\rejctmap.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\seam.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\split.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\statistc.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\stepblob.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\vecfuncs.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccstruct\werd.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\ambigs.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\basedir.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\bits16.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\bitvector.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\ccutil.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\clst.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\doubleptr.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\elst.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\elst2.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\errcode.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\fileerr.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\genericheap.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\genericvector.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\globaloc.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\hashfn.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\helpers.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\host.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\indexmapbidi.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\kdpair.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\lsterr.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\memry.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\ndminx.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\nwmain.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\object_cache.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\ocrclass.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\params.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\platform.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\qrsequence.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\scanutils.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\serialis.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\sorthelper.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\stderr.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\strngs.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\tesscallback.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\tessdatamanager.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\tprintf.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\unichar.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\unicharmap.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\unicharset.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\unicity_table.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\unicodes.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\ccutil\universalambigs.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\adaptive.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\blobclass.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\classify.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\cluster.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\clusttool.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\cutoffs.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\errorcounter.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\featdefs.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\float2int.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\fpoint.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\intfeaturedist.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\intfeaturemap.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\intfeaturespace.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\intfx.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\intmatcher.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\intproto.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\kdtree.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\mastertrainer.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\mf.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\mfdefs.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\mfoutline.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\mfx.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\normfeat.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\normmatch.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\ocrfeatures.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\outfeat.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\picofeat.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\protos.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\sampleiterator.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\shapeclassifier.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\shapetable.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\tessclassifier.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\trainingsample.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\classify\trainingsampleset.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\altlist.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\beam_search.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\bmp_8.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\cached_file.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\char_altlist.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\char_bigrams.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\char_samp.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\char_samp_enum.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\char_samp_set.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\char_set.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\classifier_base.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\classifier_factory.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\conv_net_classifier.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\con_comp.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\cube_const.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\cube_line_object.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\cube_line_segmenter.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\cube_object.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\cube_search_object.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\cube_tuning_params.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\cube_utils.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\feature_base.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\feature_bmp.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\feature_chebyshev.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\feature_hybrid.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\hybrid_neural_net_classifier.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\lang_model.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\lang_mod_edge.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\search_column.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\search_node.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\search_object.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\string_32.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\tess_lang_model.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\tess_lang_mod_edge.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\tuning_params.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\word_altlist.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\word_list_lang_model.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\word_size_model.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cube\word_unigrams.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cutil\bitvec.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cutil\callcpp.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cutil\const.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cutil\cutil.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cutil\cutil_class.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cutil\danerror.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cutil\efio.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cutil\emalloc.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cutil\freelist.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cutil\globals.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cutil\listio.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cutil\oldlist.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\cutil\structures.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\dict\dawg.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\dict\dawg_cache.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\dict\dict.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\dict\matchdefs.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\dict\stopper.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\dict\trie.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\neural_networks\runtime\input_file_buffer.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\neural_networks\runtime\neural_net.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\neural_networks\runtime\neuron.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\opencl\oclkernels.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\opencl\openclwrapper.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\opencl\opencl_device_selection.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\alignedblob.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\baselinedetect.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\bbgrid.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\blkocc.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\blobgrid.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\ccnontextdetect.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\cjkpitch.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\colfind.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\colpartition.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\colpartitiongrid.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\colpartitionset.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\devanagari_processing.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\drawedg.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\drawtord.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\edgblob.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\edgloop.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\equationdetectbase.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\fpchop.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\gap_map.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\imagefind.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\linefind.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\makerow.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\oldbasel.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\pithsync.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\pitsync1.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\scanedg.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\sortflts.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\strokewidth.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\tabfind.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\tablefind.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\tablerecog.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\tabvector.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\textlineprojection.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\textord.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\topitch.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\tordmain.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\tovars.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\underlin.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\wordseg.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\textord\workingpartset.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\viewer\scrollview.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\viewer\svmnode.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\viewer\svutil.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\vs2010\libtesseract\resource.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\vs2010\port\gettimeofday.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\vs2010\port\mathfix.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\vs2010\port\strtok_r.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\wordrec\associate.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\wordrec\chop.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\wordrec\chopper.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\wordrec\drawfx.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\wordrec\findseam.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\wordrec\gradechop.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\wordrec\language_model.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\wordrec\lm_consistency.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\wordrec\lm_pain_points.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\wordrec\lm_state.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\wordrec\measure.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\wordrec\outlines.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\wordrec\params_model.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\wordrec\plotedges.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\wordrec\render.h" />
+    <ClInclude Include="..\..\..\src\tesseract-ocr\wordrec\wordrec.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\tesseract-ocr\api\baseapi.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\api\capi.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\api\pdfrenderer.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\api\renderer.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccmain\adaptions.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccmain\applybox.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccmain\control.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccmain\cubeclassifier.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccmain\cube_control.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccmain\cube_reco_context.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccmain\docqual.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccmain\equationdetect.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccmain\fixspace.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccmain\fixxht.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccmain\ltrresultiterator.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccmain\osdetect.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccmain\output.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccmain\pageiterator.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccmain\pagesegmain.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccmain\pagewalk.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccmain\paragraphs.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccmain\paramsd.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccmain\par_control.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccmain\pgedit.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccmain\recogtraining.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccmain\reject.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccmain\resultiterator.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccmain\superscript.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccmain\tessbox.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccmain\tessedit.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccmain\tesseractclass.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccmain\tesseract_cube_combiner.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccmain\tessvars.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccmain\tfacepp.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccmain\thresholder.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccmain\werdit.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\blamer.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\blobbox.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\blobs.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\blread.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\boxread.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\boxword.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\ccstruct.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\coutln.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\detlinefit.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\dppoint.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\fontinfo.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\genblob.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\imagedata.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\linlsq.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\matrix.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\mod128.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\normalis.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\ocrblock.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\ocrpara.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\ocrrow.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\otsuthr.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\pageres.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\params_training_featdef.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\pdblock.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\points.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\polyaprx.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\polyblk.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\publictypes.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\quadlsq.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\quspline.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\ratngs.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\rect.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\rejctmap.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\seam.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\split.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\statistc.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\stepblob.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\vecfuncs.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccstruct\werd.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccutil\ambigs.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccutil\basedir.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccutil\bits16.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccutil\bitvector.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccutil\ccutil.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccutil\clst.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccutil\elst.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccutil\elst2.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccutil\errcode.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccutil\globaloc.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccutil\indexmapbidi.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccutil\mainblk.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccutil\memry.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccutil\params.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccutil\scanutils.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccutil\serialis.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccutil\strngs.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccutil\tessdatamanager.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccutil\tprintf.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccutil\unichar.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccutil\unicharmap.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccutil\unicharset.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccutil\unicodes.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\ccutil\universalambigs.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\adaptive.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\adaptmatch.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\blobclass.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\classify.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\cluster.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\clusttool.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\cutoffs.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\errorcounter.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\featdefs.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\float2int.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\fpoint.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\intfeaturedist.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\intfeaturemap.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\intfeaturespace.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\intfx.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\intmatcher.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\intproto.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\kdtree.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\mastertrainer.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\mf.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\mfdefs.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\mfoutline.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\mfx.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\normfeat.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\normmatch.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\ocrfeatures.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\outfeat.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\picofeat.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\protos.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\sampleiterator.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\shapeclassifier.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\shapetable.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\tessclassifier.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\trainingsample.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\classify\trainingsampleset.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cube\altlist.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cube\beam_search.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cube\bmp_8.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cube\cached_file.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cube\char_altlist.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cube\char_bigrams.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cube\char_samp.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cube\char_samp_enum.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cube\char_samp_set.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cube\char_set.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cube\classifier_factory.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cube\conv_net_classifier.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cube\con_comp.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cube\cube_line_object.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cube\cube_line_segmenter.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cube\cube_object.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cube\cube_search_object.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cube\cube_tuning_params.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cube\cube_utils.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cube\feature_bmp.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cube\feature_chebyshev.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cube\feature_hybrid.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cube\hybrid_neural_net_classifier.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cube\search_column.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cube\search_node.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cube\tess_lang_model.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cube\tess_lang_mod_edge.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cube\word_altlist.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cube\word_list_lang_model.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cube\word_size_model.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cube\word_unigrams.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cutil\bitvec.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cutil\callcpp.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cutil\cutil.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cutil\cutil_class.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cutil\danerror.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cutil\efio.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cutil\emalloc.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cutil\freelist.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cutil\listio.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cutil\oldlist.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\cutil\structures.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\dict\context.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\dict\dawg.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\dict\dawg_cache.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\dict\dict.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\dict\hyphen.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\dict\permdawg.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\dict\stopper.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\dict\trie.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\neural_networks\runtime\input_file_buffer.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\neural_networks\runtime\neural_net.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\neural_networks\runtime\neuron.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\neural_networks\runtime\sigmoid_table.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\opencl\openclwrapper.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\alignedblob.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\baselinedetect.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\bbgrid.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\blkocc.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\blobgrid.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\ccnontextdetect.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\cjkpitch.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\colfind.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\colpartition.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\colpartitiongrid.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\colpartitionset.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\devanagari_processing.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\drawedg.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\drawtord.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\edgblob.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\edgloop.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\equationdetectbase.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\fpchop.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\gap_map.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\imagefind.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\linefind.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\makerow.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\oldbasel.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\pithsync.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\pitsync1.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\scanedg.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\sortflts.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\strokewidth.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\tabfind.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\tablefind.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\tablerecog.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\tabvector.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\textlineprojection.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\textord.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\topitch.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\tordmain.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\tospace.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\tovars.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\underlin.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\wordseg.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\textord\workingpartset.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\viewer\scrollview.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\viewer\svmnode.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\viewer\svpaint.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\viewer\svutil.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\vs2010\port\gettimeofday.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\vs2010\port\strtok_r.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\wordrec\associate.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\wordrec\chop.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\wordrec\chopper.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\wordrec\drawfx.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\wordrec\findseam.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\wordrec\gradechop.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\wordrec\language_model.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\wordrec\lm_consistency.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\wordrec\lm_pain_points.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\wordrec\lm_state.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\wordrec\outlines.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\wordrec\params_model.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\wordrec\pieces.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\wordrec\plotedges.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\wordrec\render.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\wordrec\segsearch.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\wordrec\tface.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\wordrec\wordclass.cpp" />
+    <ClCompile Include="..\..\..\src\tesseract-ocr\wordrec\wordrec.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
