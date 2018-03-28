@@ -1,5 +1,10 @@
 /doc/
 /lib/
 /obj/
+*.sdf
+*.suo
+*.opensdf
+/test_data/
+*.pdb
 
 

@@ -1,0 +1,23 @@
+1. tesseract-ocr: release, 3.04
+	commit: 228317c;
+	date: 2015.07.24;
+	url: https://github.com/tesseract-ocr/tesseract/releases
+2. zlib:
+	version: 1.2.8
+	url: http://www.zlib.net/
+3. libpng:
+	version: 1.6.16
+	url: http://www.libpng.org/pub/png/libpng.html
+4. libjpeg:
+	version: 9a
+	url: http://www.ijg.org/files/
+5. libtiff:
+	version: 4.0.3
+	url: http://www.simplesystems.org/libtiff/
+6. gitlib:
+	version: 5.1.1
+	url: https://sourceforge.net/projects/giflib/
+7. leptonica
+	version: 1.71
+	url: http://www.leptonica.org/download.html
+

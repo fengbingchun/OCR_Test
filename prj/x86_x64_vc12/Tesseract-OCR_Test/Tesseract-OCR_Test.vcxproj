@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\demo\Tesseract-OCR_Test.cpp" />
+    <ClCompile Include="..\..\..\demo\Tesseract-OCR_Test\Tesseract-OCR_Test.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{B358494F-2B55-456C-AACD-C8EEEFDB9368}</ProjectGuid>
