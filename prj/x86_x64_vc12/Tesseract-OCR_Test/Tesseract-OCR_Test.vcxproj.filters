@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\demo\Tesseract-OCR_Test.cpp">
+    <ClCompile Include="..\..\..\demo\Tesseract-OCR_Test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

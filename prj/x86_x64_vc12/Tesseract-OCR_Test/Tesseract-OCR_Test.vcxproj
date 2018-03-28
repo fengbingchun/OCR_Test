@@ -18,6 +18,9 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\demo\Tesseract-OCR_Test.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{B358494F-2B55-456C-AACD-C8EEEFDB9368}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -71,16 +74,16 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>.\../../../../obj/dbg/x64_vc12/Tesseract-OCR_Test\</OutDir>
-    <IntDir>.\../../../../obj/dbg/x64_vc12/Tesseract-OCR_Test\</IntDir>
+    <OutDir>.\../../../obj/dbg/x64_vc12/Tesseract-OCR_Test\</OutDir>
+    <IntDir>.\../../../obj/dbg/x64_vc12/Tesseract-OCR_Test\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>.\../../../../obj/rel/x64_vc12/Tesseract-OCR_Test\</OutDir>
-    <IntDir>.\../../../../obj/rel/x64_vc12/Tesseract-OCR_Test\</IntDir>
+    <OutDir>.\../../../obj/rel/x64_vc12/Tesseract-OCR_Test\</OutDir>
+    <IntDir>.\../../../obj/rel/x64_vc12/Tesseract-OCR_Test\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -103,21 +106,21 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <PrecompiledHeaderOutputFile>.\../../../../obj/dbg/x64_vc12/Tesseract-OCR_Test\Tesseract-OCR_Test.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\../../../../obj/dbg/x64_vc12/Tesseract-OCR_Test\</AssemblerListingLocation>
-      <ObjectFileName>.\../../../../obj/dbg/x64_vc12/Tesseract-OCR_Test\</ObjectFileName>
-      <ProgramDataBaseFileName>.\../../../../obj/dbg/x64_vc12/Tesseract-OCR_Test\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\../../../obj/dbg/x64_vc12/Tesseract-OCR_Test\Tesseract-OCR_Test.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\../../../obj/dbg/x64_vc12/Tesseract-OCR_Test\</AssemblerListingLocation>
+      <ObjectFileName>.\../../../obj/dbg/x64_vc12/Tesseract-OCR_Test\</ObjectFileName>
+      <ProgramDataBaseFileName>.\../../../obj/dbg/x64_vc12/Tesseract-OCR_Test\</ProgramDataBaseFileName>
       <AdditionalIncludeDirectories>E:\GitCode\Tesseract-OCR_Test\src\api;E:\GitCode\Tesseract-OCR_Test\src\ccmain;E:\GitCode\Tesseract-OCR_Test\src\ccutil;E:\GitCode\Tesseract-OCR_Test\src\ccstruct;E:\GitCode\Tesseract-OCR_Test\src\classify;E:\GitCode\Tesseract-OCR_Test\src\cube;E:\GitCode\Tesseract-OCR_Test\src\cutil;E:\GitCode\Tesseract-OCR_Test\src\dict;E:\GitCode\Tesseract-OCR_Test\src\image;E:\GitCode\Tesseract-OCR_Test\src\neural_networks\runtime;E:\GitCode\Tesseract-OCR_Test\src\textord;E:\GitCode\Tesseract-OCR_Test\src\viewer;E:\GitCode\Tesseract-OCR_Test\src\wordrec;E:\GitCode\Tesseract-OCR_Test\src\vs2010\port;E:\GitCode\Tesseract-OCR_Test\src\opencl;E:\GitCode\Liblept_Test\src\leptonica-1.71\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <OutputFile>.\../../../../lib/dbg/x64_vc12/Tesseract-OCR_Test.exe</OutputFile>
+      <OutputFile>.\../../../lib/dbg/x64_vc12/Tesseract-OCR_Test.exe</OutputFile>
       <AdditionalLibraryDirectories>E:\GitCode\Liblept_Test\lib\dbg\x64_vc12;E:\GitCode\Tesseract-OCR_Test\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>ws2_32.lib;user32.lib;zlib[dbg_x64_vc12].lib;libpng[dbg_x64_vc12].lib;libjpeg[dbg_x64_vc12].lib;giflib[dbg_x64_vc12].lib;libtiff[dbg_x64_vc12].lib;liblept[dbg_x64_vc12].lib;libtesseract304-static-debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Bscmake>
-      <OutputFile>.\../../../../obj/dbg/x64_vc12/Tesseract-OCR_Test\Tesseract-OCR_Test.bsc</OutputFile>
+      <OutputFile>.\../../../obj/dbg/x64_vc12/Tesseract-OCR_Test\Tesseract-OCR_Test.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -147,10 +150,10 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <PrecompiledHeaderOutputFile>.\../../../../obj/rel/x64_vc12/Tesseract-OCR_Test\Tesseract-OCR_Test.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\../../../../obj/rel/x64_vc12/Tesseract-OCR_Test\</AssemblerListingLocation>
-      <ObjectFileName>.\../../../../obj/rel/x64_vc12/Tesseract-OCR_Test\</ObjectFileName>
-      <ProgramDataBaseFileName>.\../../../../obj/rel/x64_vc12/Tesseract-OCR_Test\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\../../../obj/rel/x64_vc12/Tesseract-OCR_Test\Tesseract-OCR_Test.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\../../../obj/rel/x64_vc12/Tesseract-OCR_Test\</AssemblerListingLocation>
+      <ObjectFileName>.\../../../obj/rel/x64_vc12/Tesseract-OCR_Test\</ObjectFileName>
+      <ProgramDataBaseFileName>.\../../../obj/rel/x64_vc12/Tesseract-OCR_Test\</ProgramDataBaseFileName>
       <AdditionalIncludeDirectories>E:\GitCode\Tesseract-OCR_Test\src\api;E:\GitCode\Tesseract-OCR_Test\src\ccmain;E:\GitCode\Tesseract-OCR_Test\src\ccutil;E:\GitCode\Tesseract-OCR_Test\src\ccstruct;E:\GitCode\Tesseract-OCR_Test\src\classify;E:\GitCode\Tesseract-OCR_Test\src\cube;E:\GitCode\Tesseract-OCR_Test\src\cutil;E:\GitCode\Tesseract-OCR_Test\src\dict;E:\GitCode\Tesseract-OCR_Test\src\image;E:\GitCode\Tesseract-OCR_Test\src\neural_networks\runtime;E:\GitCode\Tesseract-OCR_Test\src\textord;E:\GitCode\Tesseract-OCR_Test\src\viewer;E:\GitCode\Tesseract-OCR_Test\src\wordrec;E:\GitCode\Tesseract-OCR_Test\src\vs2010\port;E:\GitCode\Tesseract-OCR_Test\src\opencl;E:\GitCode\Liblept_Test\src\leptonica-1.71\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
@@ -158,17 +161,14 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <OutputFile>.\../../../../lib/rel/x64_vc12/Tesseract-OCR_Test.exe</OutputFile>
+      <OutputFile>.\../../../lib/rel/x64_vc12/Tesseract-OCR_Test.exe</OutputFile>
       <AdditionalLibraryDirectories>E:\GitCode\Liblept_Test\lib\rel\x64_vc12;E:\GitCode\Tesseract-OCR_Test\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>ws2_32.lib;user32.lib;zlib[rel_x64_vc12].lib;libpng[rel_x64_vc12].lib;libjpeg[rel_x64_vc12].lib;giflib[rel_x64_vc12].lib;libtiff[rel_x64_vc12].lib;liblept[rel_x64_vc12].lib;libtesseract304-static.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Bscmake>
-      <OutputFile>.\../../../../obj/rel/x64_vc12/Tesseract-OCR_Test\Tesseract-OCR_Test.bsc</OutputFile>
+      <OutputFile>.\../../../obj/rel/x64_vc12/Tesseract-OCR_Test\Tesseract-OCR_Test.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\..\demo\Tesseract-OCR_Test.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
