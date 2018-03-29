@@ -18,5 +18,13 @@
     <ClCompile Include="..\..\..\demo\Tesseract-OCR_Test\Tesseract-OCR_Test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\demo\Tesseract-OCR_Test\funset.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\demo\Tesseract-OCR_Test\funset.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

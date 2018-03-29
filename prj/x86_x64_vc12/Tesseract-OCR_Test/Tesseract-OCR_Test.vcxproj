@@ -19,7 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\demo\Tesseract-OCR_Test\funset.cpp" />
     <ClCompile Include="..\..\..\demo\Tesseract-OCR_Test\Tesseract-OCR_Test.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\demo\Tesseract-OCR_Test\funset.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{B358494F-2B55-456C-AACD-C8EEEFDB9368}</ProjectGuid>
@@ -110,14 +114,14 @@
       <AssemblerListingLocation>.\../../../obj/dbg/x64_vc12/Tesseract-OCR_Test\</AssemblerListingLocation>
       <ObjectFileName>.\../../../obj/dbg/x64_vc12/Tesseract-OCR_Test\</ObjectFileName>
       <ProgramDataBaseFileName>.\../../../obj/dbg/x64_vc12/Tesseract-OCR_Test\</ProgramDataBaseFileName>
-      <AdditionalIncludeDirectories>E:\GitCode\Tesseract-OCR_Test\src\api;E:\GitCode\Tesseract-OCR_Test\src\ccmain;E:\GitCode\Tesseract-OCR_Test\src\ccutil;E:\GitCode\Tesseract-OCR_Test\src\ccstruct;E:\GitCode\Tesseract-OCR_Test\src\classify;E:\GitCode\Tesseract-OCR_Test\src\cube;E:\GitCode\Tesseract-OCR_Test\src\cutil;E:\GitCode\Tesseract-OCR_Test\src\dict;E:\GitCode\Tesseract-OCR_Test\src\image;E:\GitCode\Tesseract-OCR_Test\src\neural_networks\runtime;E:\GitCode\Tesseract-OCR_Test\src\textord;E:\GitCode\Tesseract-OCR_Test\src\viewer;E:\GitCode\Tesseract-OCR_Test\src\wordrec;E:\GitCode\Tesseract-OCR_Test\src\vs2010\port;E:\GitCode\Tesseract-OCR_Test\src\opencl;E:\GitCode\Liblept_Test\src\leptonica-1.71\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\GitCode\OCR_Test\src\tesseract-ocr\api;E:\GitCode\OCR_Test\src\tesseract-ocr\ccmain;E:\GitCode\OCR_Test\src\tesseract-ocr\ccutil;E:\GitCode\OCR_Test\src\tesseract-ocr\ccstruct;E:\GitCode\OCR_Test\src\tesseract-ocr\classify;E:\GitCode\OCR_Test\src\tesseract-ocr\cube;E:\GitCode\OCR_Test\src\tesseract-ocr\cutil;E:\GitCode\OCR_Test\src\tesseract-ocr\dict;E:\GitCode\OCR_Test\src\tesseract-ocr\image;E:\GitCode\OCR_Test\src\tesseract-ocr\neural_networks\runtime;E:\GitCode\OCR_Test\src\tesseract-ocr\textord;E:\GitCode\OCR_Test\src\tesseract-ocr\viewer;E:\GitCode\OCR_Test\src\tesseract-ocr\wordrec;E:\GitCode\OCR_Test\src\tesseract-ocr\vs2010\port;E:\GitCode\OCR_Test\src\tesseract-ocr\opencl;E:\GitCode\OCR_Test\src\leptonica-1.71\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <OutputFile>.\../../../lib/dbg/x64_vc12/Tesseract-OCR_Test.exe</OutputFile>
-      <AdditionalLibraryDirectories>E:\GitCode\Liblept_Test\lib\dbg\x64_vc12;E:\GitCode\Tesseract-OCR_Test\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>ws2_32.lib;user32.lib;zlib[dbg_x64_vc12].lib;libpng[dbg_x64_vc12].lib;libjpeg[dbg_x64_vc12].lib;giflib[dbg_x64_vc12].lib;libtiff[dbg_x64_vc12].lib;liblept[dbg_x64_vc12].lib;libtesseract304-static-debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:\GitCode\OCR_Test\lib\dbg\x64_vc12;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ws2_32.lib;user32.lib;zlib.lib;libpng.lib;libjpeg.lib;giflib.lib;libtiff.lib;liblept.lib;libtesseract.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Bscmake>
       <OutputFile>.\../../../obj/dbg/x64_vc12/Tesseract-OCR_Test\Tesseract-OCR_Test.bsc</OutputFile>
@@ -154,7 +158,7 @@
       <AssemblerListingLocation>.\../../../obj/rel/x64_vc12/Tesseract-OCR_Test\</AssemblerListingLocation>
       <ObjectFileName>.\../../../obj/rel/x64_vc12/Tesseract-OCR_Test\</ObjectFileName>
       <ProgramDataBaseFileName>.\../../../obj/rel/x64_vc12/Tesseract-OCR_Test\</ProgramDataBaseFileName>
-      <AdditionalIncludeDirectories>E:\GitCode\Tesseract-OCR_Test\src\api;E:\GitCode\Tesseract-OCR_Test\src\ccmain;E:\GitCode\Tesseract-OCR_Test\src\ccutil;E:\GitCode\Tesseract-OCR_Test\src\ccstruct;E:\GitCode\Tesseract-OCR_Test\src\classify;E:\GitCode\Tesseract-OCR_Test\src\cube;E:\GitCode\Tesseract-OCR_Test\src\cutil;E:\GitCode\Tesseract-OCR_Test\src\dict;E:\GitCode\Tesseract-OCR_Test\src\image;E:\GitCode\Tesseract-OCR_Test\src\neural_networks\runtime;E:\GitCode\Tesseract-OCR_Test\src\textord;E:\GitCode\Tesseract-OCR_Test\src\viewer;E:\GitCode\Tesseract-OCR_Test\src\wordrec;E:\GitCode\Tesseract-OCR_Test\src\vs2010\port;E:\GitCode\Tesseract-OCR_Test\src\opencl;E:\GitCode\Liblept_Test\src\leptonica-1.71\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\GitCode\OCR_Test\src\tesseract-ocr\api;E:\GitCode\OCR_Test\src\tesseract-ocr\ccmain;E:\GitCode\OCR_Test\src\tesseract-ocr\ccutil;E:\GitCode\OCR_Test\src\tesseract-ocr\ccstruct;E:\GitCode\OCR_Test\src\tesseract-ocr\classify;E:\GitCode\OCR_Test\src\tesseract-ocr\cube;E:\GitCode\OCR_Test\src\tesseract-ocr\cutil;E:\GitCode\OCR_Test\src\tesseract-ocr\dict;E:\GitCode\OCR_Test\src\tesseract-ocr\image;E:\GitCode\OCR_Test\src\tesseract-ocr\neural_networks\runtime;E:\GitCode\OCR_Test\src\tesseract-ocr\textord;E:\GitCode\OCR_Test\src\tesseract-ocr\viewer;E:\GitCode\OCR_Test\src\tesseract-ocr\wordrec;E:\GitCode\OCR_Test\src\tesseract-ocr\vs2010\port;E:\GitCode\OCR_Test\src\tesseract-ocr\opencl;E:\GitCode\OCR_Test\src\leptonica-1.71\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -162,8 +166,8 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <OutputFile>.\../../../lib/rel/x64_vc12/Tesseract-OCR_Test.exe</OutputFile>
-      <AdditionalLibraryDirectories>E:\GitCode\Liblept_Test\lib\rel\x64_vc12;E:\GitCode\Tesseract-OCR_Test\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>ws2_32.lib;user32.lib;zlib[rel_x64_vc12].lib;libpng[rel_x64_vc12].lib;libjpeg[rel_x64_vc12].lib;giflib[rel_x64_vc12].lib;libtiff[rel_x64_vc12].lib;liblept[rel_x64_vc12].lib;libtesseract304-static.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:\GitCode\OCR_Test\lib\rel\x64_vc12;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ws2_32.lib;user32.lib;zlib.lib;libpng.lib;libjpeg.lib;giflib.lib;libtiff.lib;liblept.lib;libtesseract.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Bscmake>
       <OutputFile>.\../../../obj/rel/x64_vc12/Tesseract-OCR_Test\Tesseract-OCR_Test.bsc</OutputFile>
