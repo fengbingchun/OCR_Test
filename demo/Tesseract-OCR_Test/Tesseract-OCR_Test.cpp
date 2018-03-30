@@ -3,7 +3,7 @@
 
 int main()
 {
-	int ret = test_tesseract_ocr_1();
+	int ret = test_recognize_image_content_1();
 
 	if (ret == 0) fprintf(stdout, "========== test success ==========\n");
 	else fprintf(stderr, "########## test fail ##########\n");

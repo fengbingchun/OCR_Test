@@ -1,18 +1,90 @@
 #include "funset.hpp"
+
 #include <iostream>
 #include <string>
 #include <vector>
 
 #include <allheaders.h>
+
 #include <baseapi.h>
 #include <basedir.h>
 #include <renderer.h>
 #include <strngs.h>
 #include <tprintf.h>
 #include <openclwrapper.h>
-#include <osdetect.h>
 
+namespace {
 
+#ifdef _MSC_VER
+void utf8_to_gbk(const char* utf8, char* gbk)
+{
+	const int maxlen = 128;
+	wchar_t unicode_str[maxlen];
+	int outlen = MultiByteToWideChar(CP_UTF8, 0, utf8, strlen(utf8), unicode_str, maxlen);
+	outlen = WideCharToMultiByte(CP_ACP, 0, unicode_str, outlen, gbk, 128, nullptr, nullptr);
+	gbk[outlen] = '\0';
+}
+#endif
+
+} // namespace
+
+int test_recognize_image_content_1()
+{
+	// Blog: https://blog.csdn.net/fengbingchun/article/details/79757639
+
+	// reference: https://github.com/tesseract-ocr/tesseract/wiki/APIExample
+{ // chinese
+	// Initialize tesseract-ocr
+	tesseract::TessBaseAPI* api = new tesseract::TessBaseAPI();
+	const char* datapath{ "E:/GitCode/OCR_Test/test_data/tessdata/" };
+	if (api->Init(datapath, "chi_sim")) {
+		fprintf(stderr, "Could not initialize tesseract.\n");
+		return -1;
+	}
+
+	// Open input image with leptonica library
+	Pix* image = pixRead("E:/GitCode/OCR_Test/test_data/chi_sim_1.png");
+	api->SetImage(image);
+	// Get OCR result
+	char* outText = api->GetUTF8Text();
+	char gbk[256];
+	utf8_to_gbk(outText, gbk);
+	fprintf(stdout, "OCR output: %s\n", gbk);
+
+	// Destroy used object and release memory
+	api->End();
+	delete api;
+	delete[] outText;
+	pixDestroy(&image);
+}
+
+{ // english
+	// Initialize tesseract-ocr
+	tesseract::TessBaseAPI* api = new tesseract::TessBaseAPI();
+	const char* datapath{ "E:/GitCode/OCR_Test/test_data/tessdata/" };
+	if (api->Init(datapath, "eng")) {
+		fprintf(stderr, "Could not initialize tesseract.\n");
+		return -1;
+	}
+
+	// Open input image with leptonica library
+	Pix* image = pixRead("E:/GitCode/OCR_Test/test_data/eng_1.png");
+	api->SetImage(image);
+	// Get OCR result
+	char* outText = api->GetUTF8Text();
+	char gbk[256];
+	utf8_to_gbk(outText, gbk);
+	fprintf(stdout, "OCR output: %s\n", gbk);
+
+	// Destroy used object and release memory
+	api->End();
+	delete api;
+	delete[] outText;
+	pixDestroy(&image);
+}
+
+	return 0;
+}
 
 //////////////////////////////////////////////////////////////////
 namespace {
