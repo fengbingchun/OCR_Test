@@ -4,6 +4,7 @@
 - Tesseract-OCR's usage [GitHub](https://github.com/tesseract-ocr/tesseract)
 - Text detection and localization in images [SourceForge](https://sourceforge.net/projects/tirg/)
 - FreeType's usage [freetype](https://www.freetype.org/)
+- OpenCV support chinese text output
 
 **The project support platform: windows7/10 64 bits. It can be directly build with VS2013 in windows7/10 64bits.**
 

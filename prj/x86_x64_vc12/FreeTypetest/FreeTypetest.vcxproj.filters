@@ -21,9 +21,15 @@
     <ClCompile Include="..\..\..\demo\FreeType_Test\funset.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\src\CvxText\CvxText.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\demo\FreeType_Test\funset.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\CvxText\CvxText.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

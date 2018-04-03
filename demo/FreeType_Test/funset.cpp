@@ -3,12 +3,46 @@
 
 //It contains various macro declarations that are later used to #include the
 //appropriate public FreeType 2 header files.
-#include "ft2build.h"
+#include <ft2build.h>
 //FT_FREETYPE_H is a special macro defined in file ftheader.h. It contains some
 //installation-specific macros to name other public header files of the FreeType 2 API.
 #include FT_FREETYPE_H
-#include "ftglyph.h"
+#include <ftglyph.h>
 
+#include <opencv2/opencv.hpp>
+
+#include "CvxText.hpp"
+
+int test_opencv_support_chinese_text()
+{
+	// Blog: https://blog.csdn.net/fengbingchun/article/details/79806616
+	cv::Mat mat = cv::imread("E:/GitCode/OCR_Test/test_data/lena.png", 1);
+	if (!mat.data || mat.channels() != 3) {
+		fprintf(stderr, "read image fail\n");
+		return -1;
+	}
+
+	CvxText text("E:/GitCode/OCR_Test/test_data/simhei.ttf"); //指定字体
+	cv::Scalar size1{ 100, 0.5, 0.1, 0 }, size2{ 100, 0, 0.1, 0 }, size3{ 50, 0, 1, 0 }, size4{50, 0, 0.1, 0}; // (字体大小, 无效的, 字符间距, 无效的 }
+
+	text.setFont(nullptr, &size1, nullptr, 0);
+	text.putText(mat, "中国", cv::Point(50, 100));
+
+	text.setFont(nullptr, &size2, nullptr, 0);
+	text.putText(mat, "北京", cv::Point(50, 200), cv::Scalar(255, 0, 0));
+
+	text.setFont(nullptr, &size3, nullptr, 0);
+	text.putText(mat, "China", cv::Point(50, 250), cv::Scalar(0, 255, 0));
+
+	text.setFont(nullptr, &size4, nullptr, 0);
+	text.putText(mat, "BeiJing", cv::Point(50, 300), cv::Scalar(0, 0, 255));
+
+	cv::imwrite("E:/GitCode/OCR_Test/test_data/result_lena.png", mat);
+
+	return 0;
+}
+
+///////////////////////////////////////////////////////////////////////
 int test_freetype_1()
 {
 	FT_Library library; /* handle to library */
