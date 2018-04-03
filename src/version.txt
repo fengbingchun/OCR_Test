@@ -20,4 +20,6 @@
 7. leptonica
 	version: 1.71
 	url: http://www.leptonica.org/download.html
-
+8. freetype:
+	version: 2.5.5
+	url: https://www.freetype.org/download.html

@@ -1,8 +1,9 @@
 # OCR_Test
 **The main role of the project:**
-- Image library's usage: libjpeg/libtiff/libpng/giflib/liblept
-- Tesseract-OCR's usage
-- Text detection and localization in images
+- Image codec library's usage: libjpeg/libtiff/libpng/giflib/liblept
+- Tesseract-OCR's usage [GitHub](https://github.com/tesseract-ocr/tesseract)
+- Text detection and localization in images [SourceForge](https://sourceforge.net/projects/tirg/)
+- FreeType's usage [freetype](https://www.freetype.org/)
 
 **The project support platform: windows7/10 64 bits. It can be directly build with VS2013 in windows7/10 64bits.**
 
