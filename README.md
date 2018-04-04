@@ -2,7 +2,7 @@
 **The main role of the project:**
 - Image codec library's usage: libjpeg/libtiff/libpng/giflib/liblept
 - Tesseract-OCR's usage [GitHub](https://github.com/tesseract-ocr/tesseract)
-- Text detection and localization in images [SourceForge](https://sourceforge.net/projects/tirg/)
+- Text detection and localization: TiRG [SourceForge](https://sourceforge.net/projects/tirg/)
 - FreeType's usage [freetype](https://www.freetype.org/)
 - OpenCV support chinese text output
 

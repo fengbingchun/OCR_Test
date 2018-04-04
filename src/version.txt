@@ -23,3 +23,7 @@
 8. freetype:
 	version: 2.5.5
 	url: https://www.freetype.org/download.html
+9. TiRG:
+	date: 2014.04.29
+	url: https://sourceforge.net/projects/tirg/
+
