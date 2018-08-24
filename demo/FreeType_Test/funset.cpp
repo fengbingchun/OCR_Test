@@ -16,13 +16,21 @@
 int test_opencv_support_chinese_text()
 {
 	// Blog: https://blog.csdn.net/fengbingchun/article/details/79806616
+#ifdef _MSC_VER
 	cv::Mat mat = cv::imread("E:/GitCode/OCR_Test/test_data/lena.png", 1);
+#else
+	cv::Mat mat = cv::imread("test_data/lena.png", 1);
+#endif
 	if (!mat.data || mat.channels() != 3) {
 		fprintf(stderr, "read image fail\n");
 		return -1;
 	}
 
+#ifdef _MSC_VER
 	CvxText text("E:/GitCode/OCR_Test/test_data/simhei.ttf"); //指定字体
+#else
+	CvxText text("test_data/simhei.ttf"); //指定字体
+#endif
 	cv::Scalar size1{ 100, 0.5, 0.1, 0 }, size2{ 100, 0, 0.1, 0 }, size3{ 50, 0, 1, 0 }, size4{50, 0, 0.1, 0}; // (字体大小, 无效的, 字符间距, 无效的 }
 
 	text.setFont(nullptr, &size1, nullptr, 0);
@@ -37,7 +45,11 @@ int test_opencv_support_chinese_text()
 	text.setFont(nullptr, &size4, nullptr, 0);
 	text.putText(mat, "BeiJing", cv::Point(50, 300), cv::Scalar(0, 0, 255));
 
+#ifdef _MSC_VER
 	cv::imwrite("E:/GitCode/OCR_Test/test_data/result_lena.png", mat);
+#else
+	cv::imwrite("test_data/result_lena.png", mat);
+#endif
 
 	return 0;
 }
@@ -59,7 +71,11 @@ int test_freetype_1()
 
 	//2. Loading a Font Face
 	//From a Font File, Create a new face object by calling FT_New_Face. A face describes a given typeface and style.
+#ifdef _MSC_VER
 	char* filename = "E:/GitCode/OCR_Test/test_data/kaiu.ttf";
+#else
+	char* filename = "test_data/kaiu.ttf";
+#endif
 	error = FT_New_Face(library, filename, 0, &face);
 
 	if (error == FT_Err_Unknown_File_Format) {

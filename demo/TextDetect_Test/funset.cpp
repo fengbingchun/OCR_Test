@@ -6,7 +6,11 @@
 int test_TiRG()
 {
 	// Blog: https://blog.csdn.net/fengbingchun/article/details/79819800
+#ifdef _MSC_VER
 	const std::string name{ "E:/GitCode/OCR_Test/test_data/tirg.jpg" };
+#else
+	const std::string name{ "test_data/tirg.jpg" };
+#endif
 	cv::Mat mat = cv::imread(name, 1);
 	if (!mat.data || mat.channels() != 3) {
 		fprintf(stderr, "read image fail: %s\n", name.c_str());
@@ -30,7 +34,10 @@ int test_TiRG()
 		cv::rectangle(mat, cv::Point(rect[i].x1, rect[i].y1), cv::Point(rect[i].x2, rect[i].y2), cv::Scalar(0, 255, 0));
 	}
 
+#ifdef _MSC_VER
 	cv::imwrite("E:/GitCode/OCR_Test/test_data/result_tirg.jpg", mat);
-
+#else
+	cv::imwrite("test_data/result_tirg.jpg", mat);
+#endif
 	return 0;
 }

@@ -6,5 +6,16 @@
 *.opensdf
 /test_data/
 *.pdb
-
+/prj/linux_cmake_FreeType_Test/build/
+/prj/linux_cmake_FreeType_Test/test_data
+/prj/linux_cmake_TextDetect_Test/build/
+/prj/linux_cmake_TextDetect_Test/test_data
+/prj/linux_cmake_Liblept_Test/build/
+/prj/linux_cmake_Liblept_Test/test_data
+*.o
+*.lo
+*.a
+*.so
+*.libs/
+*.deps/
 

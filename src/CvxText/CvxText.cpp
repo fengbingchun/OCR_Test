@@ -6,35 +6,35 @@
 
 #include "CvxText.hpp"
 
-// ´ò¿ª×Ö¿â
+// æ‰“å¼€å­—åº“
 CvxText::CvxText(const char* freeType)
 {
 	assert(freeType != NULL);
 	
-	// ´ò¿ª×Ö¿âÎÄ¼ş, ´´½¨Ò»¸ö×ÖÌå
+	// æ‰“å¼€å­—åº“æ–‡ä»¶, åˆ›å»ºä¸€ä¸ªå­—ä½“
 	if(FT_Init_FreeType(&m_library)) throw;
 	if(FT_New_Face(m_library, freeType, 0, &m_face)) throw;
 	
-	// ÉèÖÃ×ÖÌåÊä³ö²ÎÊı
+	// è®¾ç½®å­—ä½“è¾“å‡ºå‚æ•°
 	restoreFont();
 	
-	// ÉèÖÃCÓïÑÔµÄ×Ö·û¼¯»·¾³
+	// è®¾ç½®Cè¯­è¨€çš„å­—ç¬¦é›†ç¯å¢ƒ
 	setlocale(LC_ALL, "");
 }
 
-// ÊÍ·ÅFreeType×ÊÔ´
+// é‡Šæ”¾FreeTypeèµ„æº
 CvxText::~CvxText()
 {
 	FT_Done_Face(m_face);
 	FT_Done_FreeType(m_library);
 }
 
-// ÉèÖÃ×ÖÌå²ÎÊı:
+// è®¾ç½®å­—ä½“å‚æ•°:
 //
-// font         - ×ÖÌåÀàĞÍ, Ä¿Ç°²»Ö§³Ö
-// size         - ×ÖÌå´óĞ¡/¿Õ°×±ÈÀı/¼ä¸ô±ÈÀı/Ğı×ª½Ç¶È
-// underline   - ÏÂ»­Ïß
-// diaphaneity   - Í¸Ã÷¶È
+// font         - å­—ä½“ç±»å‹, ç›®å‰ä¸æ”¯æŒ
+// size         - å­—ä½“å¤§å°/ç©ºç™½æ¯”ä¾‹/é—´éš”æ¯”ä¾‹/æ—‹è½¬è§’åº¦
+// underline   - ä¸‹ç”»çº¿
+// diaphaneity   - é€æ˜åº¦
 void CvxText::getFont(int* type, cv::Scalar* size, bool* underline, float* diaphaneity)
 {
 	if (type) *type = m_fontType;
@@ -45,7 +45,7 @@ void CvxText::getFont(int* type, cv::Scalar* size, bool* underline, float* diaph
 
 void CvxText::setFont(int* type, cv::Scalar* size, bool* underline, float* diaphaneity)
 {
-	// ²ÎÊıºÏ·¨ĞÔ¼ì²é
+	// å‚æ•°åˆæ³•æ€§æ£€æŸ¥
 	if (type) {
 		if(type >= 0) m_fontType = *type;
 	}
@@ -65,25 +65,25 @@ void CvxText::setFont(int* type, cv::Scalar* size, bool* underline, float* diaph
 	FT_Set_Pixel_Sizes(m_face, (int)m_fontSize.val[0], 0);
 }
 
-// »Ö¸´Ô­Ê¼µÄ×ÖÌåÉèÖÃ
+// æ¢å¤åŸå§‹çš„å­—ä½“è®¾ç½®
 void CvxText::restoreFont()
 {
-	m_fontType = 0;            // ×ÖÌåÀàĞÍ(²»Ö§³Ö)
+	m_fontType = 0;            // å­—ä½“ç±»å‹(ä¸æ”¯æŒ)
 	
-	m_fontSize.val[0] = 20;      // ×ÖÌå´óĞ¡
-	m_fontSize.val[1] = 0.5;   // ¿Õ°××Ö·û´óĞ¡±ÈÀı
-	m_fontSize.val[2] = 0.1;   // ¼ä¸ô´óĞ¡±ÈÀı
-	m_fontSize.val[3] = 0;      // Ğı×ª½Ç¶È(²»Ö§³Ö)
+	m_fontSize.val[0] = 20;      // å­—ä½“å¤§å°
+	m_fontSize.val[1] = 0.5;   // ç©ºç™½å­—ç¬¦å¤§å°æ¯”ä¾‹
+	m_fontSize.val[2] = 0.1;   // é—´éš”å¤§å°æ¯”ä¾‹
+	m_fontSize.val[3] = 0;      // æ—‹è½¬è§’åº¦(ä¸æ”¯æŒ)
 	
-	m_fontUnderline   = false;   // ÏÂ»­Ïß(²»Ö§³Ö)
+	m_fontUnderline   = false;   // ä¸‹ç”»çº¿(ä¸æ”¯æŒ)
 	
-	m_fontDiaphaneity = 1.0;   // É«²Ê±ÈÀı(¿É²úÉúÍ¸Ã÷Ğ§¹û)
+	m_fontDiaphaneity = 1.0;   // è‰²å½©æ¯”ä¾‹(å¯äº§ç”Ÿé€æ˜æ•ˆæœ)
 	
-	// ÉèÖÃ×Ö·û´óĞ¡
+	// è®¾ç½®å­—ç¬¦å¤§å°
 	FT_Set_Pixel_Sizes(m_face, (int)m_fontSize.val[0], 0);
 }
 
-// Êä³öº¯Êı(ÑÕÉ«Ä¬ÈÏÎª°×É«)
+// è¾“å‡ºå‡½æ•°(é¢œè‰²é»˜è®¤ä¸ºç™½è‰²)
 int CvxText::putText(cv::Mat& img, const char* text, cv::Point pos)
 {
 	return putText(img, text, pos, CV_RGB(255, 255, 255));
@@ -103,10 +103,10 @@ int CvxText::putText(cv::Mat& img, const char* text, cv::Point pos, cv::Scalar c
 	for (i = 0; text[i] != '\0'; ++i) {
 		wchar_t wc = text[i];
 		
-		// ½âÎöË«×Ö½Ú·ûºÅ
+		// è§£æåŒå­—èŠ‚ç¬¦å·
 		if(!isascii(wc)) mbtowc(&wc, &text[i++], 2);
 		
-		// Êä³öµ±Ç°µÄ×Ö·û
+		// è¾“å‡ºå½“å‰çš„å­—ç¬¦
 		putWChar(img, wc, pos, color);
 	}
 
@@ -120,24 +120,24 @@ int CvxText::putText(cv::Mat& img, const wchar_t* text, cv::Point pos, cv::Scala
 
 	int i;
 	for(i = 0; text[i] != '\0'; ++i) {
-		// Êä³öµ±Ç°µÄ×Ö·û
+		// è¾“å‡ºå½“å‰çš„å­—ç¬¦
 		putWChar(img, text[i], pos, color);
 	}
 
 	return i;
 }
 
-// Êä³öµ±Ç°×Ö·û, ¸üĞÂm_posÎ»ÖÃ
+// è¾“å‡ºå½“å‰å­—ç¬¦, æ›´æ–°m_posä½ç½®
 void CvxText::putWChar(cv::Mat& img, wchar_t wc, cv::Point& pos, cv::Scalar color)
 {
-	// ¸ù¾İunicodeÉú³É×ÖÌåµÄ¶şÖµÎ»Í¼
+	// æ ¹æ®unicodeç”Ÿæˆå­—ä½“çš„äºŒå€¼ä½å›¾
 	FT_UInt glyph_index = FT_Get_Char_Index(m_face, wc);
 	FT_Load_Glyph(m_face, glyph_index, FT_LOAD_DEFAULT);
 	FT_Render_Glyph(m_face->glyph, FT_RENDER_MODE_MONO);
 
 	FT_GlyphSlot slot = m_face->glyph;
 
-	// ĞĞÁĞÊı
+	// è¡Œåˆ—æ•°
 	int rows = slot->bitmap.rows;
 	int cols = slot->bitmap.width;
 
@@ -153,7 +153,7 @@ void CvxText::putWChar(cv::Mat& img, wchar_t wc, cv::Point& pos, cv::Scalar colo
 					cv::Vec3b pixel = img.at<cv::Vec3b>(cv::Point(c, r));
 					cv::Scalar scalar = cv::Scalar(pixel.val[0], pixel.val[1], pixel.val[2]);
 				
-					// ½øĞĞÉ«²ÊÈÚºÏ
+					// è¿›è¡Œè‰²å½©èåˆ
 					float p = m_fontDiaphaneity;
 					for (int k = 0; k < 4; ++k) {
 						scalar.val[k] = scalar.val[k]*(1-p) + color.val[k]*p;
@@ -167,7 +167,7 @@ void CvxText::putWChar(cv::Mat& img, wchar_t wc, cv::Point& pos, cv::Scalar colo
 		}
 	}
 	
-	// ĞŞ¸ÄÏÂÒ»¸ö×ÖµÄÊä³öÎ»ÖÃ
+	// ä¿®æ”¹ä¸‹ä¸€ä¸ªå­—çš„è¾“å‡ºä½ç½®
 	double space = m_fontSize.val[0]*m_fontSize.val[1];
 	double sep   = m_fontSize.val[0]*m_fontSize.val[2];
 	

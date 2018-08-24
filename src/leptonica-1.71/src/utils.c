@@ -181,6 +181,7 @@
 #else
 #include <sys/stat.h>  /* for stat, mkdir(2) */
 #include <sys/types.h>
+#define MAX_PATH 4096 // fengbingchun add: error: 'MAX_PATH' undeclared
 #endif
 
 
