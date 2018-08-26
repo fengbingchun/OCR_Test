@@ -147,9 +147,9 @@
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>E:\GitCode\OCR_Test\src\UTF8_CPP;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeaderOutputFile>.\../../../obj/rel/x64_vc12/UTF8_CPP_Test\UTF8_CPP_Test.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\../../../rel/dbg/x64_vc12/UTF8_CPP_Test/</AssemblerListingLocation>
-      <ObjectFileName>.\../../../rel/dbg/x64_vc12/UTF8_CPP_Test/</ObjectFileName>
-      <ProgramDataBaseFileName>.\../../../rel/dbg/x64_vc12/UTF8_CPP_Test/</ProgramDataBaseFileName>
+      <AssemblerListingLocation>.\../../../obj/rel/x64_vc12/UTF8_CPP_Test/</AssemblerListingLocation>
+      <ObjectFileName>.\../../../obj/rel/x64_vc12/UTF8_CPP_Test/</ObjectFileName>
+      <ProgramDataBaseFileName>.\../../../obj/rel/x64_vc12/UTF8_CPP_Test/</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
