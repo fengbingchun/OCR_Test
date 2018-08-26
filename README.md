@@ -5,6 +5,7 @@
 - Text detection and localization: TiRG [SourceForge](https://sourceforge.net/projects/tirg/)
 - FreeType's usage [freetype](https://www.freetype.org/)
 - OpenCV support chinese text output
+- UTF-8 CPP's usage [UTF-8 CPP sourceforge](https://sourceforge.net/projects/utfcpp/)
 
 **The project support platform:**
 - windows7/10 64 bits: It can be directly build with VS2013 in windows7/10 64bits.

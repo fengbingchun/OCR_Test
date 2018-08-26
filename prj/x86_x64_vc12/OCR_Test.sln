@@ -27,6 +27,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FreeType_Test", "FreeTypete
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TextDetect_Test", "TextDetect_Test\TextDetect_Test.vcxproj", "{177AF9E2-2A5E-456E-B83F-A0B284B77AB4}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UTF8_CPP_Test", "UTF8_CPP_Test\UTF8_CPP_Test.vcxproj", "{8078B738-1D91-426E-9242-19C619B5DDB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -77,6 +79,8 @@ Global
 		{92548AB1-B209-41A2-8FA3-C4EE78E40B2D}.Release|x64.Build.0 = Release|x64
 		{177AF9E2-2A5E-456E-B83F-A0B284B77AB4}.Debug|x64.ActiveCfg = Debug|x64
 		{177AF9E2-2A5E-456E-B83F-A0B284B77AB4}.Release|x64.ActiveCfg = Release|x64
+		{8078B738-1D91-426E-9242-19C619B5DDB7}.Debug|x64.ActiveCfg = Debug|x64
+		{8078B738-1D91-426E-9242-19C619B5DDB7}.Release|x64.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

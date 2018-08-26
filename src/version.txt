@@ -26,4 +26,7 @@
 9. TiRG:
 	date: 2014.04.29
 	url: https://sourceforge.net/projects/tirg/
+10. UTF-8 CPP:
+	date: 2014.08.26
+	url: https://sourceforge.net/projects/utfcpp/
 

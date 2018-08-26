@@ -1,0 +1,7 @@
+#ifndef FBC_UTF8_CPP_TEST_FUNSET_HPP_
+#define FBC_UTF8_CPP_TEST_FUNSET_HPP_
+
+int test_utf8_1();
+
+#endif // FBC_UTF8_CPP_TEST_FUNSET_HPP_
+
