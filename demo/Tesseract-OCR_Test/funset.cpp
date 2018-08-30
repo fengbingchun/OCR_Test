@@ -1,5 +1,6 @@
 #include "funset.hpp"
 
+#include <string.h>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -15,16 +16,18 @@
 
 namespace {
 
-#ifdef _MSC_VER
 void utf8_to_gbk(const char* utf8, char* gbk)
 {
+#ifdef _MSC_VER
 	const int maxlen = 128;
 	wchar_t unicode_str[maxlen];
 	int outlen = MultiByteToWideChar(CP_UTF8, 0, utf8, strlen(utf8), unicode_str, maxlen);
 	outlen = WideCharToMultiByte(CP_ACP, 0, unicode_str, outlen, gbk, 128, nullptr, nullptr);
 	gbk[outlen] = '\0';
-}
+#else
+	strcpy(gbk, utf8);
 #endif
+}
 
 } // namespace
 
@@ -36,14 +39,22 @@ int test_recognize_image_content_1()
 { // chinese
 	// Initialize tesseract-ocr
 	tesseract::TessBaseAPI* api = new tesseract::TessBaseAPI();
+#ifdef _MSC_VER
 	const char* datapath{ "E:/GitCode/OCR_Test/test_data/tessdata/" };
+#else
+	const char* datapath{ "test_data/tessdata/" };
+#endif
 	if (api->Init(datapath, "chi_sim")) {
 		fprintf(stderr, "Could not initialize tesseract.\n");
 		return -1;
 	}
 
 	// Open input image with leptonica library
+#ifdef _MSC_VER
 	Pix* image = pixRead("E:/GitCode/OCR_Test/test_data/chi_sim_1.png");
+#else
+	Pix* image = pixRead("test_data/chi_sim_1.png");
+#endif
 	api->SetImage(image);
 	// Get OCR result
 	char* outText = api->GetUTF8Text();
@@ -61,14 +72,22 @@ int test_recognize_image_content_1()
 { // english
 	// Initialize tesseract-ocr
 	tesseract::TessBaseAPI* api = new tesseract::TessBaseAPI();
+#ifdef _MSC_VER
 	const char* datapath{ "E:/GitCode/OCR_Test/test_data/tessdata/" };
+#else
+	const char* datapath{ "test_data/tessdata/" };
+#endif
 	if (api->Init(datapath, "eng")) {
 		fprintf(stderr, "Could not initialize tesseract.\n");
 		return -1;
 	}
 
 	// Open input image with leptonica library
+#ifdef _MSC_VER
 	Pix* image = pixRead("E:/GitCode/OCR_Test/test_data/eng_1.png");
+#else
+	Pix* image = pixRead("test_data/eng_1.png");
+#endif
 	api->SetImage(image);
 	// Get OCR result
 	char* outText = api->GetUTF8Text();
@@ -369,10 +388,14 @@ int test_tesseract_ocr_1()
 
 	int argc = 1;
 	std::vector<const char*> str;
+#ifdef _MSC_VER
 #ifdef _DEBUG
 	str.emplace_back("E:/GitCode/OCR_Test/lib/dbg/x64_vc12/Tesseract-OCR_Test.exe");
 #else
 	str.emplace_back("E:/GitCode/OCR_Test/lib/rel/x64_vc12/Tesseract-OCR_Test.exe");
+#endif
+#else
+	str.emplace_back("Tesseract-OCR_Test");
 #endif
 	char** argv = (char**)(&str[0]);
 
@@ -475,6 +498,6 @@ int test_tesseract_ocr_1()
 	}
 
 	PERF_COUNT_END
-		return 0;                      // Normal exit
+		return 0; // Normal exit
 }
 

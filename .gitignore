@@ -18,4 +18,8 @@
 *.so
 *.libs/
 *.deps/
+/prj/linux_cmake_UTF8_CPP_Test/build/
+/prj/linux_cmake_UTF8_CPP_Test/test_data
+/prj/linux_cmake_Tesseract-OCR_Test/build/
+/prj/linux_cmake_Tesseract-OCR_Test/test_data
 

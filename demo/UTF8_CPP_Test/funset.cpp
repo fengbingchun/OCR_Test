@@ -1,4 +1,5 @@
 #include "funset.hpp"
+#include <string.h>
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -33,7 +34,11 @@ void fix_utf8_string(std::string& str)
 
 int test_utf8_1()
 {
+#ifdef _MSC_VER
 	const char* test_file_path = "E:/GitCode/OCR_Test/test_data/utf8.txt";
+#else
+	const char* test_file_path = "test_data/utf8.txt";
+#endif
 	// Open the test file(contains UTF-8 encoded text)
 	std::ifstream fs8(test_file_path);
 	if (!fs8.is_open()) {
@@ -79,7 +84,7 @@ int test_utf8_1()
 	utf8::utf8to16(str.begin(), str.end(), std::back_inserter(utf16result));
 	size_t size1 = utf16result.size();
 
-	std::string str2 = "ž@¼@ŠB•B";
+	std::string str2 = "æ¿¦ç²¿å¤¿æ—´";
 	std::string utf8str;
 	utf8::utf16to8(str2.begin(), str2.end(), std::back_inserter(utf8str));
 	size_t size2 = utf8str.length();
@@ -100,7 +105,7 @@ int test_utf8_1()
 	std::basic_string<wchar_t> sex;
 	utf8::utf8to16(szSex, szSex + strlen(szSex), back_inserter(sex));
 
-	if (sex != L"ÄÐ") {
+	if (sex != L"ç”·") {
 		std::cout << "unicode char utf16 error" << std::endl;
 		return -1;
 	}

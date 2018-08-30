@@ -12,6 +12,9 @@
 - Linux:
 	- FreeType_Test support cmake build(file position: prj/linux_cmake_FreeType_Test)
 	- TextDetect_Test support cmake build(file position: prj/linux_cmake_TextDetect_Test)
+	- UTF8_CPP_Test support cmake build(file position: prj/linux_cmake_UTF8_CPP_Test)
+	- Liblept_Test support cmake build(file position: prj/linux_cmake_Liblept_Test)
+	- Tesseract-OCR_Test support cmake build(file position: prj/linux_cmake_Tesseract-OCR_Test)
 
 **Screenshot:**  
 ![](https://github.com/fengbingchun/OCR_Test/blob/master/prj/x86_x64_vc12/Screenshot.png)
