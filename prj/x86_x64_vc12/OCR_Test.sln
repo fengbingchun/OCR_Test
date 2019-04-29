@@ -29,6 +29,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TextDetect_Test", "TextDete
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UTF8_CPP_Test", "UTF8_CPP_Test\UTF8_CPP_Test.vcxproj", "{8078B738-1D91-426E-9242-19C619B5DDB7}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Libjpeg-turbo_Test", "Libjpeg-turbo_Test\Libjpeg-turbo_Test.vcxproj", "{3F5D5A79-31B9-433B-AEA7-D613BEF8832F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -81,6 +83,8 @@ Global
 		{177AF9E2-2A5E-456E-B83F-A0B284B77AB4}.Release|x64.ActiveCfg = Release|x64
 		{8078B738-1D91-426E-9242-19C619B5DDB7}.Debug|x64.ActiveCfg = Debug|x64
 		{8078B738-1D91-426E-9242-19C619B5DDB7}.Release|x64.ActiveCfg = Release|x64
+		{3F5D5A79-31B9-433B-AEA7-D613BEF8832F}.Debug|x64.ActiveCfg = Debug|x64
+		{3F5D5A79-31B9-433B-AEA7-D613BEF8832F}.Release|x64.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

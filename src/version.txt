@@ -29,4 +29,9 @@
 10. UTF-8 CPP:
 	date: 2014.08.26
 	url: https://sourceforge.net/projects/utfcpp/
+11. libjpeg-turbo:
+	commit: a4aa30d
+	date: 2019.02.14
+	version: 2.0.2
+	url: https://github.com/libjpeg-turbo/libjpeg-turbo
 
