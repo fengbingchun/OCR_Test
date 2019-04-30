@@ -4,6 +4,8 @@
 #include "funset.hpp"
 #include <opencv2/opencv.hpp>
 
+// Blog: https://blog.csdn.net/fengbingchun/article/details/89715416
+
 int parse_jpeg_file(const char* name)
 {
 	FILE* infile = nullptr;
@@ -159,8 +161,11 @@ int get_jpeg_compress_data(const unsigned char* data, int width, int height, int
 
 int test_libjpeg_turbo()
 {
+#ifdef _MSC_VER
 	std::string image_path{ "E:/GitCode/OCR_Test/test_data/" };
-
+#else
+	std::string image_path{ "test_data/" };
+#endif
 	std::string name1 = image_path + "tirg.jpg";
 	parse_jpeg_file(name1.c_str());
 

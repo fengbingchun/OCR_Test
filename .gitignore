@@ -22,4 +22,13 @@
 /prj/linux_cmake_UTF8_CPP_Test/test_data
 /prj/linux_cmake_Tesseract-OCR_Test/build/
 /prj/linux_cmake_Tesseract-OCR_Test/test_data
+/src/zlib/zlib-1.2.8/
+/src/libtiff/tiff-4.0.3/
+/src/libjpeg/
+/src/leptonica-1.71/
+/src/libpng/lpng1616/
+/src/giflib/giflib-5.1.1/
+/src/libjpeg-turbo/build/
+/prj/linux_cmake_Libjpeg-turbo_Test/build/
+/prj/linux_cmake_Libjpeg-turbo_Test/test_data
 
