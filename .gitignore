@@ -31,4 +31,5 @@
 /src/libjpeg-turbo/build/
 /prj/linux_cmake_Libjpeg-turbo_Test/build/
 /prj/linux_cmake_Libjpeg-turbo_Test/test_data
+src/libjpeg/jpeg-9a/jconfig.h
 

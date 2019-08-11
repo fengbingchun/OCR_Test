@@ -21,6 +21,9 @@
     <ClCompile Include="..\..\..\demo\Liblept_Test\funset.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\demo\Liblept_Test\test_stb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\demo\Liblept_Test\funset.hpp">

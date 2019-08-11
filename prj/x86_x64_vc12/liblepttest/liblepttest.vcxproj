@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="..\..\..\demo\Liblept_Test\funset.cpp" />
     <ClCompile Include="..\..\..\demo\Liblept_Test\Liblept_Test.cpp" />
+    <ClCompile Include="..\..\..\demo\Liblept_Test\test_stb.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\demo\Liblept_Test\funset.hpp" />
@@ -125,7 +126,7 @@
       <AssemblerListingLocation>.\../../../obj/dbg/x64_vc12/liblepttest\</AssemblerListingLocation>
       <ObjectFileName>.\../../../obj/dbg/x64_vc12/liblepttest\</ObjectFileName>
       <ProgramDataBaseFileName>.\../../../obj/dbg/x64_vc12/liblepttest\</ProgramDataBaseFileName>
-      <AdditionalIncludeDirectories>E:\GitCode\OCR_Test\src\zlib\zlib-1.2.8;E:\GitCode\OCR_Test\src\libpng\lpng1616;E:\GitCode\OCR_Test\src\libjpeg\jpeg-9a;E:\GitCode\OCR_Test\src\libtiff\tiff-4.0.3\libtiff;E:\GitCode\OCR_Test\src\giflib\giflib-5.1.1\lib;E:\GitCode\OCR_Test\src\leptonica-1.71\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\GitCode\OCR_Test\src\zlib\zlib-1.2.8;E:\GitCode\OCR_Test\src\libpng\lpng1616;E:\GitCode\OCR_Test\src\libjpeg\jpeg-9a;E:\GitCode\OCR_Test\src\libtiff\tiff-4.0.3\libtiff;E:\GitCode\OCR_Test\src\giflib\giflib-5.1.1\lib;E:\GitCode\OCR_Test\src\leptonica-1.71\src;E:\GitCode\OCR_Test\src\stb;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -176,7 +177,7 @@
       <AssemblerListingLocation>.\../../../obj/rel/x64_vc12/liblepttest\</AssemblerListingLocation>
       <ObjectFileName>.\../../../obj/rel/x64_vc12/liblepttest\</ObjectFileName>
       <ProgramDataBaseFileName>.\../../../obj/rel/x64_vc12/liblepttest\</ProgramDataBaseFileName>
-      <AdditionalIncludeDirectories>E:\GitCode\OCR_Test\src\zlib\zlib-1.2.8;E:\GitCode\OCR_Test\src\libpng\lpng1616;E:\GitCode\OCR_Test\src\libjpeg\jpeg-9a;E:\GitCode\OCR_Test\src\libtiff\tiff-4.0.3\libtiff;E:\GitCode\OCR_Test\src\giflib\giflib-5.1.1\lib;E:\GitCode\OCR_Test\src\leptonica-1.71\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\GitCode\OCR_Test\src\zlib\zlib-1.2.8;E:\GitCode\OCR_Test\src\libpng\lpng1616;E:\GitCode\OCR_Test\src\libjpeg\jpeg-9a;E:\GitCode\OCR_Test\src\libtiff\tiff-4.0.3\libtiff;E:\GitCode\OCR_Test\src\giflib\giflib-5.1.1\lib;E:\GitCode\OCR_Test\src\leptonica-1.71\src;E:\GitCode\OCR_Test\src\stb;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

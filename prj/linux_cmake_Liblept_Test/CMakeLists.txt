@@ -18,6 +18,7 @@ SET(PATH_SRC_LIBJPEG_FILES ${PROJECT_SOURCE_DIR}/./../../src/libjpeg/jpeg-9a)
 SET(PATH_SRC_LIBTIFF_FILES ${PROJECT_SOURCE_DIR}/./../../src/libtiff/tiff-4.0.3)
 SET(PATH_SRC_GIFLIB_FILES ${PROJECT_SOURCE_DIR}/./../../src/giflib/giflib-5.1.1)
 SET(PATH_SRC_LIBLEPT_FILES ${PROJECT_SOURCE_DIR}/./../../src/leptonica-1.71)
+SET(PATH_SRC_STB_FILES ${PROJECT_SOURCE_DIR}/./../../src/stb)
 MESSAGE(STATUS "path zlib src files: ${PATH_SRC_ZLIB_FILES}")
 
 # head file search path
@@ -29,6 +30,7 @@ INCLUDE_DIRECTORIES(
 	${PATH_SRC_LIBTIFF_FILES}/libtiff
 	${PATH_SRC_GIFLIB_FILES}/lib
 	${PATH_SRC_LIBLEPT_FILES}/src
+	${PATH_SRC_STB_FILES}
 )
 
 # recursive query match files :*.cpp

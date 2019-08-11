@@ -7,11 +7,14 @@
 	- giflib
 	- liblept
 	- libjpeg-turbo
+	- stb[nothings/stb](https://github.com/nothings/stb)
 - Tesseract-OCR's usage [GitHub](https://github.com/tesseract-ocr/tesseract)
 - Text detection and localization: TiRG [SourceForge](https://sourceforge.net/projects/tirg/)
 - FreeType's usage [freetype](https://www.freetype.org/)
 - OpenCV support chinese text output
 - UTF-8 CPP's usage [UTF-8 CPP sourceforge](https://sourceforge.net/projects/utfcpp/)
+
+**The version of each open source library see:**[version.txt](https://github.com/fengbingchun/OCR_Test/blob/master/src/version.txt)
 
 **The project support platform:**
 - windows7/10 64 bits: It can be directly build with VS2013 in windows7/10 64bits.
