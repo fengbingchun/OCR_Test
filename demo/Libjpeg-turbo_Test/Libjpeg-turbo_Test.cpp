@@ -3,7 +3,7 @@
 
 int main()
 {
-	int ret = test_libjpeg_turbo();
+	int ret = test_libjpeg_turbo_decompress();
 
 	if (ret == 0) fprintf(stdout, "========== test success ==========\n");
 	else fprintf(stderr, "########## test fail ##########\n");
